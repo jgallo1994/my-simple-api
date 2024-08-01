@@ -1,0 +1,9 @@
+# .husky/pre-commit
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Ejecuta lint-staged para formatear y corregir archivos
+npx lint-staged
+
+# Ejecuta las pruebas unitarias
+npm test
